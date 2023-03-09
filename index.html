@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban Board</title>
+</head>
+<body>
+    
+    <div class="model" id="todo-form">
+        <div class="header">
+            <div class="titel1">Add Something</div>
+            <button class="btn model-btn" data-target="#model1">&times;</button>
+        </div>
+        <div class="body">
+            <input type="text" id="todo-input">
+            <input type="submit" value="Add" id="todo-submit">
+        </div>
+    </div>
+    <div id="overlay"></div>
+<!--Kanban Boare-->
+<h1 class="kanban-titel">Kanban Board </h1>
+    <div class="kanban-container">
+        <div class="kanban-column" id="no_status">
+            <h2 class="title">Not Started</h2>
+            <div class="todo" draggable="true">
+                Task One
+                <span class="remove-icon">🗑</span>
+            </div>
+            <button id="addBtn" type="button" data-target="#todo-form">+ Add</button>
+        </div>
+        <div class="kanban-column">
+            <h2 class="title">In Progress</h2>
+
+        </div>
+        <div class="kanban-column">
+            <h2 class="title">Completed</h2>
+            
+           
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

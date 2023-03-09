@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009578;
+    position: relative;
+}
+.kanban-titel{
+    color: #000;
+    font-size: 44px;
+    line-height: 1.1;
+    position: absolute;
+    top: 16px;
+    left: 37%;
+    user-select: none;
+}
+.kanban-container{
+    background-color: #009578;
+    width: 1000px;
+    height: 50vh;   
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.kanban-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.kanban-column .title{
+    color: #fff;
+    user-select: none;
+}
+.todo{
+    margin-bottom: 10px;
+    width: 80%;
+    position: relative;
+    background-color: #fff;
+    box-shadow:  rgba(15,15,15,0.1) 0px 0px 0px 1px, rgba(15,15,15,0.1)  0px 2px 4px ;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 30px;
+}
+
+.remove-icon{
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    cursor: pointer;
+}
+
+.remove-icon:hover{
+    color: red;
+    transition: all .4s;
+}
+#addBtn{
+   
+    width: 80%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#addBtn:hover{
+    background:rgba(0,0,0,0.25) ;
+    transition: all .4s;
+}
+
+
+.btn{
+    outline: none;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+.model-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+}
+.model{
+    width: 450px;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transition: top 0.5s ease-in-out;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 2;
+}
+.model.active{
+    top: 15%;
+    transition: top 0.5s ease-in-out;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #009578;
+    padding: 8px 13px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.body{
+    padding: 15px;
+}
+#overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+#overlay.active{
+    display: block;
+}
+
+#todo-input
+,#todo-submit{
+    width: 100%;
+    padding: 10px 15px;
+    margin: 5px;
+}
+#todo-input{
+    text-align: center;
+    font-size: 18px;
+}
+#todo-submit{
+    background: #009578;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
